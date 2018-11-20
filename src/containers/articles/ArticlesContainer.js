@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Text } from 'react-native-elements'
 
 import * as articlesActions from '@redux/articles'
+import { navigationOptions } from '@theme'
+import ArticlesScreen from './ArticlesScreen'
 
 class RecitationsContainer extends React.Component {
   async componentDidMount() {
@@ -12,13 +13,14 @@ class RecitationsContainer extends React.Component {
   }
 
   render() {
-    return <Text>Articles</Text>
+    return <ArticlesScreen {...this.props} />
   }
 }
 
 RecitationsContainer.navigationOptions = ({ navigation }) => {
   return {
-    title: 'Artikel',
+    title: 'Test Kumparan',
+    ...navigationOptions,
   }
 }
 
