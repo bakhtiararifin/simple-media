@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "prettify": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\""
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,6 +21,7 @@
     "redux-axios-middleware": "^4.0.0"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "babel-preset-expo": "^5.0.0",
+    "prettier": "^1.15.2"
   }
 }
