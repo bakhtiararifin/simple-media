@@ -22,8 +22,13 @@ class SearchArticlesContainer extends React.Component {
     this.setState(newState)
   }
 
-  searchArticles() {
-    alert('search articles')
+  async searchArticles() {
+    const {navigation, searchArticles} = this.props
+    await searchArticles({
+      q: this.state.keyword,
+      sort: this.state.sort
+    })
+    navigation.navigate('Articles')
   }
 
   render() {

@@ -25,6 +25,7 @@ export function searchArticles(params) {
     payload: {
       request: {
         url: '/svc/search/v2/articlesearch.json',
+        params
       },
     },
   }
