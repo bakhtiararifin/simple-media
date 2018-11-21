@@ -1,24 +1,37 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { createAppContainer, createStackNavigator, createDrawerNavigator } from 'react-navigation'
 
 import ArticlesContainer from './containers/articles/ArticlesContainer'
 import SearchArticlesContainer from './containers/search-articles/SearchArticlesContainer'
 import BooksContainer from './containers/books/BooksContainer'
 
-const AppNavigator = createStackNavigator(
-  {
-    Articles: {
-      screen: ArticlesContainer,
+const AppDrawerNavigator = createDrawerNavigator({
+  ArticlesStack: createStackNavigator(
+    {
+      Articles: {
+        screen: ArticlesContainer,
+      },
+      SearchArticles: {
+        screen: SearchArticlesContainer,
+      },
     },
-    SearchArticles: {
-      screen: SearchArticlesContainer,
+    {
+      navigationOptions: {
+        drawerLabel: 'Artikel',
+      },
     },
-    Books: {
-      screen: BooksContainer,
+  ),
+  BooksStack: createStackNavigator(
+    {
+      Books: {
+        screen: BooksContainer,
+      },
     },
-  },
-  {
-    initialRouteName: 'Books',
-  },
-)
+    {
+      navigationOptions: {
+        drawerLabel: 'Buku',
+      },
+    },
+  ),
+})
 
-export default createAppContainer(AppNavigator)
+export default createAppContainer(AppDrawerNavigator)

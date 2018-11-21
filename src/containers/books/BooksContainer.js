@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'react-native-elements'
 
 import * as booksActions from '@redux/books'
-import { navigationOptions } from '@theme'
+import { navigationOptions, colors } from '@theme'
 import BooksScreen from './BooksScreen'
 
 class BooksContainer extends React.Component {
@@ -36,6 +37,13 @@ class BooksContainer extends React.Component {
 BooksContainer.navigationOptions = ({ navigation }) => {
   return {
     title: 'Buku',
+    headerLeft: (
+      <Button
+        onPress={() => navigation.toggleDrawer()}
+        icon={{ name: 'dehaze' }}
+        backgroundColor={colors.primary}
+      />
+    ),
     ...navigationOptions,
   }
 }

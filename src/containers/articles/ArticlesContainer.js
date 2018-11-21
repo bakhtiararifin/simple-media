@@ -42,6 +42,13 @@ ArticlesContainer.navigationOptions = ({ navigation }) => {
         backgroundColor={colors.primary}
       />
     ),
+    headerLeft: (
+      <Button
+        onPress={() => navigation.toggleDrawer()}
+        icon={{ name: 'dehaze' }}
+        backgroundColor={colors.primary}
+      />
+    ),
     ...navigationOptions,
   }
 }
