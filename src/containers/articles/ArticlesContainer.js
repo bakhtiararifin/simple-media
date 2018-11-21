@@ -1,15 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'react-native-elements'
 
 import * as articlesActions from '@redux/articles'
-import { navigationOptions } from '@theme'
+import { navigationOptions, colors } from '@theme'
 import ArticlesScreen from './ArticlesScreen'
 
-class RecitationsContainer extends React.Component {
+class ArticlesContainer extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.searchArticle = this.searchArticle.bind(this)
+  }
+
   async componentDidMount() {
-    const { searchArticles } = this.props
+    const { navigation, searchArticles } = this.props
+
+    navigation.setParams({
+      searchArticle: this.searchArticle,
+    })
 
     await searchArticles()
+  }
+
+  searchArticle() {
+    this.props.navigation.navigate('SearchArticles')
   }
 
   render() {
@@ -17,9 +32,16 @@ class RecitationsContainer extends React.Component {
   }
 }
 
-RecitationsContainer.navigationOptions = ({ navigation }) => {
+ArticlesContainer.navigationOptions = ({ navigation }) => {
   return {
     title: 'Test Kumparan',
+    headerRight: (
+      <Button
+        onPress={navigation.getParam('searchArticle')}
+        iconRight={{ name: 'search' }}
+        backgroundColor={colors.primary}
+      />
+    ),
     ...navigationOptions,
   }
 }
@@ -31,4 +53,4 @@ export default connect(
   {
     searchArticles: articlesActions.searchArticles,
   },
-)(RecitationsContainer)
+)(ArticlesContainer)
