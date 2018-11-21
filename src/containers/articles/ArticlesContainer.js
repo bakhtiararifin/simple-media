@@ -20,7 +20,7 @@ class ArticlesContainer extends React.Component {
       searchArticle: this.searchArticle,
     })
 
-    await searchArticles({sort: 'newest'})
+    await searchArticles({ sort: 'newest' })
   }
 
   searchArticle() {

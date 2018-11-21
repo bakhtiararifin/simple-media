@@ -23,10 +23,10 @@ class SearchArticlesContainer extends React.Component {
   }
 
   async searchArticles() {
-    const {navigation, searchArticles} = this.props
+    const { navigation, searchArticles } = this.props
     await searchArticles({
       q: this.state.keyword,
-      sort: this.state.sort
+      sort: this.state.sort,
     })
     navigation.navigate('Articles')
   }
