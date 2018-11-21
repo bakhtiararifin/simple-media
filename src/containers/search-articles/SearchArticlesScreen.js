@@ -1,13 +1,33 @@
 import React from 'react'
-import { ScrollView, View } from 'react-native'
-import { Text } from 'react-native-elements'
+import { View, Picker } from 'react-native'
+import { FormLabel, FormInput, Divider, Button } from 'react-native-elements'
 
 import { colors } from '@theme'
 
-const ArticlesScreen = ({ navigation, articles }) => {
+const ArticlesScreen = ({ keyword, sort, updateState, searchArticles }) => {
   return (
     <View style={{ flex: 1 }}>
-      <Text>Pencarian Article</Text>
+      <FormLabel>Keyword</FormLabel>
+      <FormInput value={keyword} onChangeText={value => updateState({ keyword: value })} />
+      <Divider style={{ marginHorizontal: 15, marginBottom: 15 }} />
+
+      <FormLabel>Urutkan dari</FormLabel>
+      <Picker
+        selectedValue={sort}
+        style={{ marginHorizontal: 15 }}
+        onValueChange={value => updateState({ sort: value })}
+      >
+        <Picker.Item label="Berita terbaru" value="newest" />
+        <Picker.Item label="Berita terlama" value="oldest" />
+      </Picker>
+      <Divider style={{ marginHorizontal: 15, marginBottom: 30 }} />
+
+      <Button
+        title="Cari"
+        backgroundColor={colors.primary}
+        color={colors.white}
+        onPress={searchArticles}
+      />
     </View>
   )
 }
