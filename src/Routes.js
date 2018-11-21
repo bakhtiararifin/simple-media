@@ -2,6 +2,7 @@ import { createAppContainer, createStackNavigator, createDrawerNavigator } from 
 
 import ArticlesContainer from './containers/articles/ArticlesContainer'
 import SearchArticlesContainer from './containers/search-articles/SearchArticlesContainer'
+import DetailArticleContainer from './containers/detail-article/DetailArticleContainer'
 import BooksContainer from './containers/books/BooksContainer'
 
 const AppDrawerNavigator = createDrawerNavigator({
@@ -12,6 +13,9 @@ const AppDrawerNavigator = createDrawerNavigator({
       },
       SearchArticles: {
         screen: SearchArticlesContainer,
+      },
+      DetailArticle: {
+        screen: DetailArticleContainer,
       },
     },
     {
