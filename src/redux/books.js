@@ -7,7 +7,7 @@ export default function reducer(state = { data: [] }, action) {
     case SEARCH_BOOKS:
       return { ...state, loading: true }
     case SEARCH_BOOKS_SUCCESS:
-      return { ...state, loading: false, data: action.payload.data.response.results }
+      return { ...state, loading: false, data: action.payload.data.results }
     case SEARCH_BOOKS_FAIL:
       return {
         ...state,
@@ -19,13 +19,13 @@ export default function reducer(state = { data: [] }, action) {
   }
 }
 
-export function searchArticles(params) {
+export function searchBooks(params) {
   return {
     type: SEARCH_BOOKS,
     payload: {
       request: {
         url: '/svc/books/v3/lists.json',
-        params
+        params,
       },
     },
   }
