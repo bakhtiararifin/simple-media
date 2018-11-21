@@ -1,26 +1,39 @@
 import React from 'react'
-import { ScrollView, View } from 'react-native'
-import { Text } from 'react-native-elements'
-import moment from 'moment'
+import { ScrollView, View, Picker } from 'react-native'
+import { FormLabel, Divider, Text } from 'react-native-elements'
 
 import { colors } from '@theme'
 
-const BooksScreen = ({ navigation, articles }) => {
+const BooksScreen = ({ list, changeList, books }) => {
   return (
     <View style={{ flex: 1 }}>
-      <Text>Books</Text>
-      {/* <ScrollView>
-        {articles.map(article => (
-          <View
-            key={article._id}
-            style={{ padding: 15, borderBottomColor: colors.border, borderBottomWidth: 1 }}
-          >
-            <Text h3>{article.headline.main}</Text>
-            <Text>{article.snippet}</Text>
-            <Text>{moment(article.pub_date).format('MMMM Do YYYY')}</Text>
-          </View>
-        ))}
-      </ScrollView> */}
+      <FormLabel>List</FormLabel>
+      <Picker
+        selectedValue={list}
+        style={{ marginHorizontal: 15 }}
+        onValueChange={value => changeList(value)}
+      >
+        <Picker.Item label="Ebook Fiksi" value="e-book-fiction" />
+        <Picker.Item label="Buku Fiksi" value="hardcover-fiction" />
+      </Picker>
+      <Divider style={{ marginHorizontal: 15, marginBottom: 30 }} />
+
+      <ScrollView>
+        {books.map(listBook => {
+          const book = listBook.book_details[0]
+          return (
+            <View
+              key={book.primary_isbn13}
+              style={{ padding: 15, borderBottomColor: colors.border, borderBottomWidth: 1 }}
+            >
+              <Text>{book.title}</Text>
+              <Text>{book.description}</Text>
+              <Text>{book.author}</Text>
+              <Text>{book.publisher}</Text>
+            </View>
+          )
+        })}
+      </ScrollView>
     </View>
   )
 }

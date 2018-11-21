@@ -25,7 +25,7 @@ class BooksContainer extends React.Component {
   async changeList(list) {
     this.setState({ list })
 
-    await searchBooks({ list: this.state.list })
+    await this.props.searchBooks({ list })
   }
 
   render() {
