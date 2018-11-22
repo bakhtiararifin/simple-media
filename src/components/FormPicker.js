@@ -9,7 +9,7 @@ const CustomFormInput = ({ label, selectedValue, options = [], style = {}, ...ot
 
   return (
     <View>
-      <FormLabel>{label}</FormLabel>
+      {label && <FormLabel>{label}</FormLabel>}
       <Picker selectedValue={selectedValue} style={{ ...defaultStyle, ...style }} {...otherProps}>
         {options.map(option => (
           <Picker.Item key={option.value} label={option.label} value={option.value} />

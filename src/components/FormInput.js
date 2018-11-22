@@ -5,7 +5,7 @@ import { FormLabel, FormInput, Divider } from 'react-native-elements'
 const CustomFormInput = ({ label, ...otherProps }) => {
   return (
     <View>
-      <FormLabel>{label}</FormLabel>
+      {label && <FormLabel>{label}</FormLabel>}
       <FormInput {...otherProps} />
       <Divider style={{ marginHorizontal: 15, marginBottom: 15 }} />
     </View>
