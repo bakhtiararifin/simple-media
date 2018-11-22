@@ -7,7 +7,14 @@ export default function reducer(state = { data: [] }, action) {
     case SEARCH_ARTICLES:
       return { ...state, loading: true }
     case SEARCH_ARTICLES_SUCCESS:
-      return { ...state, loading: false, data: action.payload.data.response.docs }
+      let responseData = []
+      if (action.payload.data.response.meta.offset === 0) {
+        responseData = action.payload.data.response.docs
+      } else {
+        responseData = [...state.data, ...action.payload.data.response.docs]
+      }
+
+      return { ...state, loading: false, data: responseData }
     case SEARCH_ARTICLES_FAIL:
       return {
         ...state,

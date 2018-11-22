@@ -10,7 +10,10 @@ class ArticlesContainer extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = { page: 0 }
+
     this.searchArticle = this.searchArticle.bind(this)
+    this.loadMore = this.loadMore.bind(this)
   }
 
   async componentDidMount() {
@@ -27,8 +30,15 @@ class ArticlesContainer extends React.Component {
     this.props.navigation.navigate('SearchArticles')
   }
 
+  async loadMore() {
+    const page = this.state.page + 1
+    this.setState({ page })
+
+    await this.props.searchArticles({ sort: 'newest', page })
+  }
+
   render() {
-    return <ArticlesScreen {...this.props} />
+    return <ArticlesScreen {...this.props} loadMore={this.loadMore} />
   }
 }
 
