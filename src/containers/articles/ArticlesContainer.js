@@ -31,7 +31,7 @@ class ArticlesContainer extends React.Component {
   }
 
   async loadMore() {
-    const {navigation, searchArticles} = this.props
+    const { navigation, searchArticles } = this.props
     const page = this.state.page + 1
     const sort = navigation.state.params ? navigation.state.params.sort : 'newest'
     const q = navigation.state.params ? navigation.state.params.q : ''

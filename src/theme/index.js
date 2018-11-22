@@ -4,6 +4,9 @@ export const colors = {
   white: '#fff',
   background: '#eee',
   border: '#eee',
+
+  textPrimary: '#777',
+  textSecondary: '#999',
 }
 
 export const navigationOptions = {

@@ -16,7 +16,7 @@ const BooksScreen = ({ list, changeList, books }) => {
         <Picker.Item label="Ebook Fiksi" value="e-book-fiction" />
         <Picker.Item label="Buku Fiksi" value="hardcover-fiction" />
       </Picker>
-      <Divider style={{ marginHorizontal: 15, marginBottom: 30 }} />
+      <Divider style={{ marginHorizontal: 15, marginBottom: 15 }} />
 
       <ScrollView>
         {books.map(listBook => {
