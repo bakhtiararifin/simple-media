@@ -3,11 +3,13 @@ import { TouchableOpacity, FlatList, View, Image, StyleSheet } from 'react-nativ
 import moment from 'moment'
 
 import Text from '@components/Text'
+import Loading from '@components/Loading'
 import { colors } from '@theme'
 
-const ArticlesScreen = ({ navigation, articles, loadMore }) => {
+const ArticlesScreen = ({ navigation, loading, articles, loadMore }) => {
   return (
     <View style={{ flex: 1 }}>
+      {loading && <Loading />}
       <FlatList
         data={articles}
         renderItem={({ item }) => {

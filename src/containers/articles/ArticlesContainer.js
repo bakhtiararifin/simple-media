@@ -59,6 +59,7 @@ ArticlesContainer.navigationOptions = ({ navigation }) => {
 
 export default connect(
   state => ({
+    loading: state.articles.loading,
     articles: state.articles.data,
   }),
   {

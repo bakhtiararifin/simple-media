@@ -6,7 +6,7 @@ const DetailArticlesScreen = ({ article }) => {
     <View style={{ flex: 1 }}>
       <WebView
         source={{ uri: article.web_url }}
-        style={{ marginTop: -70, marginBottom: -900 }}
+        style={{ marginTop: -70 }}
         startInLoadingState
         javaScriptEnabled={false}
       />

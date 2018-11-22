@@ -44,6 +44,7 @@ BooksContainer.navigationOptions = ({ navigation }) => {
 
 export default connect(
   state => ({
+    loading: state.books.loading,
     books: state.books.data,
   }),
   {
