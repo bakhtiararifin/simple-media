@@ -4,11 +4,11 @@ import { FormLabel, FormInput, Divider, Button } from 'react-native-elements'
 
 import { colors } from '@theme'
 
-const ArticlesScreen = ({ keyword, sort, updateState, searchArticles }) => {
+const ArticlesScreen = ({ q, sort, updateState, searchArticles }) => {
   return (
     <View style={{ flex: 1 }}>
       <FormLabel>Keyword</FormLabel>
-      <FormInput value={keyword} onChangeText={value => updateState({ keyword: value })} />
+      <FormInput value={q} onChangeText={value => updateState({ q: value })} />
       <Divider style={{ marginHorizontal: 15, marginBottom: 15 }} />
 
       <FormLabel>Urutkan dari</FormLabel>

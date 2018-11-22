@@ -10,7 +10,7 @@ class SearchArticlesContainer extends React.Component {
     super(props)
 
     this.state = {
-      keyword: '',
+      q: '',
       sort: 'newest',
     }
 
@@ -24,11 +24,14 @@ class SearchArticlesContainer extends React.Component {
 
   async searchArticles() {
     const { navigation, searchArticles } = this.props
-    await searchArticles({
-      q: this.state.keyword,
+    const params = {
+      q: this.state.q,
       sort: this.state.sort,
-    })
-    navigation.navigate('Articles')
+    }
+
+    await searchArticles(params)
+
+    navigation.navigate('Articles', params)
   }
 
   render() {
