@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Picker } from 'react-native'
 import { FormLabel, Divider } from 'react-native-elements'
 
-const CustomFormInput = ({ label, selectedValue, options = [], style = {}, ...otherProps }) => {
+const CustomFormPicker = ({ label, selectedValue, options = [], style = {}, ...otherProps }) => {
   const defaultStyle = {
     marginHorizontal: 15,
   }
@@ -20,4 +20,4 @@ const CustomFormInput = ({ label, selectedValue, options = [], style = {}, ...ot
   )
 }
 
-export default CustomFormInput
+export default CustomFormPicker

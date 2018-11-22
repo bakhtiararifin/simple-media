@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {},
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {},
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          Array [
+            Object {
+              "color": "#86939e",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "marginBottom": 1,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 15,
+            },
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+    >
+      Gender
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginHorizontal": 15,
+      }
+    }
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "Male",
+            "textColor": undefined,
+            "value": "male",
+          },
+          Object {
+            "label": "Female",
+            "textColor": undefined,
+            "value": "female",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#e1e8ee",
+          "height": 1,
+        },
+        Object {
+          "marginHorizontal": 15,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`renders correctly without label 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginHorizontal": 15,
+      }
+    }
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "Male",
+            "textColor": undefined,
+            "value": "male",
+          },
+          Object {
+            "label": "Female",
+            "textColor": undefined,
+            "value": "female",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#e1e8ee",
+          "height": 1,
+        },
+        Object {
+          "marginHorizontal": 15,
+        },
+      ]
+    }
+  />
+</View>
+`;

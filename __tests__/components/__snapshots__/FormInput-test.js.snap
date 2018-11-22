@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {},
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {},
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          Array [
+            Object {
+              "color": "#86939e",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "marginBottom": 1,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 15,
+            },
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+    >
+      Name
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#bdc6cf",
+        "borderBottomWidth": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "minHeight": 36,
+            "width": 750,
+          },
+          Object {
+            "fontSize": 17.5,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#e1e8ee",
+          "height": 1,
+        },
+        Object {
+          "marginBottom": 15,
+          "marginHorizontal": 15,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`renders correctly without label 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#bdc6cf",
+        "borderBottomWidth": 1,
+        "marginLeft": 20,
+        "marginRight": 20,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      style={
+        Array [
+          Object {
+            "color": "#86939e",
+            "minHeight": 36,
+            "width": 750,
+          },
+          Object {
+            "fontSize": 17.5,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#e1e8ee",
+          "height": 1,
+        },
+        Object {
+          "marginBottom": 15,
+          "marginHorizontal": 15,
+        },
+      ]
+    }
+  />
+</View>
+`;

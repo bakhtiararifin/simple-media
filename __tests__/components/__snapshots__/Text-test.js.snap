@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bold text 1`] = `
+<Text
+  style={
+    Array [
+      Object {},
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "color": "#777",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  text
+</Text>
+`;
+
+exports[`renders correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {},
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "color": "#777",
+        "fontSize": 14,
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  text
+</Text>
+`;
+
+exports[`secondary text 1`] = `
+<Text
+  style={
+    Array [
+      Object {},
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "color": "#999",
+        "fontSize": 12,
+        "paddingVertical": 5,
+      },
+    ]
+  }
+>
+  text
+</Text>
+`;
