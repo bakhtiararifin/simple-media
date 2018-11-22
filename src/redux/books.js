@@ -1,6 +1,6 @@
-export const SEARCH_BOOKS = 'test-kumparan/articles/SEARCH_BOOKS'
-export const SEARCH_BOOKS_SUCCESS = 'test-kumparan/articles/SEARCH_BOOKS_SUCCESS'
-export const SEARCH_BOOKS_FAIL = 'test-kumparan/articles/SEARCH_BOOKS_FAIL'
+export const SEARCH_BOOKS = 'simple-media/articles/SEARCH_BOOKS'
+export const SEARCH_BOOKS_SUCCESS = 'simple-media/articles/SEARCH_BOOKS_SUCCESS'
+export const SEARCH_BOOKS_FAIL = 'simple-media/articles/SEARCH_BOOKS_FAIL'
 
 export default function reducer(state = { data: [] }, action) {
   switch (action.type) {

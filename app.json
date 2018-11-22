@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "TestKumparan",
-    "description": "This project is really great.",
-    "slug": "TestKumparan",
+    "name": "SimpleMedia",
+    "description": "simple media app",
+    "slug": "SimpleMedia",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": ["ios", "android"],

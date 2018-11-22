@@ -48,7 +48,7 @@ class ArticlesContainer extends React.Component {
 
 ArticlesContainer.navigationOptions = ({ navigation }) => {
   return {
-    title: 'Test Kumparan',
+    title: 'Simple Media',
     headerRight: (
       <Button
         onPress={navigation.getParam('searchArticle')}
