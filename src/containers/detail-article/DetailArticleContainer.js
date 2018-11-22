@@ -11,7 +11,7 @@ class DetailArticleContainer extends React.Component {
 
 DetailArticleContainer.navigationOptions = ({ navigation }) => {
   return {
-    title: 'Detail Artikel',
+    title: 'Article Detail',
     ...navigationOptions,
   }
 }

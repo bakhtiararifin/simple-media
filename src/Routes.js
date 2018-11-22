@@ -20,7 +20,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     },
     {
       navigationOptions: {
-        drawerLabel: 'Artikel',
+        drawerLabel: 'News',
       },
     },
   ),
@@ -32,7 +32,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     },
     {
       navigationOptions: {
-        drawerLabel: 'Buku',
+        drawerLabel: 'Books',
       },
     },
   ),

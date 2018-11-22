@@ -48,7 +48,7 @@ class SearchArticlesContainer extends React.Component {
 
 SearchArticlesContainer.navigationOptions = ({ navigation }) => {
   return {
-    title: 'Pencarian',
+    title: 'Filter',
     ...navigationOptions,
   }
 }
